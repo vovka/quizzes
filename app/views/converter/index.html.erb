@@ -1,0 +1,14 @@
+<%= form_with(model: @document, url: converter_index_path, method: :post, data: {remote: false}) do |f| %>
+  <p>
+    <%= f.label :source, "Source (DKT)" %>
+  </p>
+  <p>
+    <%= f.text_area :source %>
+  </p>
+  <p>
+    <%= f.submit "Convert" %>
+  </p>
+  <pre class="result">
+    <%= @document.result %>
+  </pre>
+<% end %>
